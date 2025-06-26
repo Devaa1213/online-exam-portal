@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission</title>
+</head>
+<body>
+    
+    <h2>Submission for {{ exam_name }}</h2>
+
+<ul>
+  {% for answer in answers %}
+    <li>{{ loop.index }}. Your Answer: {{ answer }}</li>
+  {% endfor %}
+</ul>
+
+{% if score is defined %}
+  <h3>Your Score: {{ score }} / {{ answers|length }}</h3>
+{% endif %}
+
+
+    <a href="{{ url_for('index') }}">Go to Home</a>
+</body>
+</html>

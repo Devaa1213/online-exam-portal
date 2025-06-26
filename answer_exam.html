@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Answer Exam</title>
+</head>
+<body>
+  <h1>Exam: {{ exam_name }} ({{ exam.type }})</h1>
+<form method="POST">
+  {% for question in questions %}
+    <div>
+      <p><strong>Question {{ loop.index }}:</strong> {{ question.question }}</p>
+      {% if question.options %}
+        {% for option in question.options %}
+          <label>
+            <input type="radio" name="q{{ loop.index0 }}" value="{{ option }}" {% if loop.first %}required{% endif %}>
+            {{ option }}
+          </label><br>
+        {% endfor %}
+      {% else %}
+        <textarea name="q{{ loop.index0 }}" required></textarea>
+      {% endif %}
+    </div>
+    <hr>
+  {% endfor %}
+  <input type="submit" value="Submit Exam">
+</form>
+
+</body>
+</html>

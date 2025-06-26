@@ -1,0 +1,71 @@
+{
+  "jee": [
+    {
+      "student": "anonymous",
+      "answers": [
+        "q",
+        "qa"
+      ]
+    },
+    {
+      "student": "anonymous",
+      "answers": [
+        "q",
+        null
+      ],
+      "score": 0
+    },
+    {
+      "student": "anonymous",
+      "answers": [
+        "q",
+        "qa",
+        "a",
+        "a"
+      ],
+      "score": 0
+    }
+  ],
+  "neet": [
+    {
+      "student": "anonymous",
+      "answers": [
+        "q",
+        "qa"
+      ],
+      "score": 0
+    },
+    {
+      "student": "anonymous",
+      "answers": [
+        "q",
+        "qa",
+        "a"
+      ],
+      "score": 0
+    }
+  ],
+  "upsc": [
+    {
+      "student": "anonymous",
+      "answers": [
+        "q"
+      ],
+      "score": 0
+    },
+    {
+      "student": "anonymous",
+      "answers": [
+        "q"
+      ],
+      "score": 0
+    },
+    {
+      "student": "anonymous",
+      "answers": [
+        "q"
+      ],
+      "score": 0
+    }
+  ]
+}

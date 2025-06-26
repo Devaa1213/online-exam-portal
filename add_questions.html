@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Questions</title>
+    <script>
+        function toggleMCQFields() {
+            var examType = "{{ exam_type }}";
+            if (examType === "MCQ") {
+                document.getElementById("mcq-fields").style.display = "block";
+            } else {
+                document.getElementById("mcq-fields").style.display = "none";
+            }
+        }
+        window.onload = toggleMCQFields;
+    </script>
+</head>
+<body>
+    <h2>Add Question to {{ exam_name }} ({{ exam_type }})</h2>
+   <form method="POST">
+  <label>Question:</label><br>
+  <input type="text" name="question" required><br><br>
+
+  {% if exam_type == "MCQ" %}
+    <label>Option 1:</label><br>
+    <input type="text" name="option1" required><br>
+
+    <label>Option 2:</label><br>
+    <input type="text" name="option2" required><br>
+
+    <label>Option 3:</label><br>
+    <input type="text" name="option3" required><br>
+
+    <label>Option 4:</label><br>
+    <input type="text" name="option4" required><br>
+
+    <label>Correct Option (1-4):</label><br>
+    <input type="text" name="correct" required><br><br>
+  {% endif %}
+
+  <button type="submit" name="add">Add Question</button>
+  <button type="submit" name="finish">Finish</button>
+</form>
+
+</body>
+</html>
